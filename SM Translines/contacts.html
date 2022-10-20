@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+    <head>
+                <base href="https://livedemo00-joomla.template-help.com/joomla_57778/index.php/contacts" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Contacts</title>
+	<script src="/cdn-cgi/apps/head/3ts2ksMwXvKRuG480KNifJ2_JNM.js"></script><link href="/joomla_57778/templates/theme3289/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/joomla_57778/modules/mod_tm_ajax_contact_form/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="/joomla_57778/media/jui/css/chosen.css?e133c98dcc843640b7693a2b591fe515" rel="stylesheet" type="text/css" />
+	<link href="/joomla_57778/templates/theme3289/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="/joomla_57778/templates/theme3289/css/template.css" rel="stylesheet" type="text/css" />
+	<link href="/joomla_57778/templates/theme3289/css/font-awesome.css" rel="stylesheet" type="text/css" />
+	<link href="/joomla_57778/templates/theme3289/css/material-icons.css" rel="stylesheet" type="text/css" />
+	<link href="//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css" />
+	<link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+	<link href="/joomla_57778/templates/theme3289/css/komento.css" rel="stylesheet" type="text/css" />
+	<link href="/joomla_57778/templates/theme3289/css/color_schemes/color_scheme_1.css" rel="stylesheet" type="text/css" id="color_scheme" />
+	<link href="/joomla_57778/templates/theme3289/html/mod_icemegamenu/css/navbar.css" rel="stylesheet" type="text/css" />
+	<script src="/joomla_57778/media/jui/js/jquery.min.js?e133c98dcc843640b7693a2b591fe515" type="text/javascript"></script>
+	<script src="/joomla_57778/media/jui/js/jquery-noconflict.js?e133c98dcc843640b7693a2b591fe515" type="text/javascript"></script>
+	<script src="/joomla_57778/media/jui/js/jquery-migrate.min.js?e133c98dcc843640b7693a2b591fe515" type="text/javascript"></script>
+	<script src="/joomla_57778/modules/mod_tm_ajax_contact_form/js/jquery.validate.min.js" type="text/javascript"></script>
+	<script src="/joomla_57778/modules/mod_tm_ajax_contact_form/js/additional-methods.min.js" type="text/javascript"></script>
+	<script src="/joomla_57778/modules/mod_tm_ajax_contact_form/js/autosize.min.js" type="text/javascript"></script>
+	<script src="/joomla_57778/modules/mod_tm_ajax_contact_form/js/ajaxsendmail.js" type="text/javascript"></script>
+	<script src="/joomla_57778/media/jui/js/bootstrap.min.js?e133c98dcc843640b7693a2b591fe515" type="text/javascript"></script>
+	<script src="/joomla_57778/media/jui/js/chosen.jquery.min.js?e133c98dcc843640b7693a2b591fe515" type="text/javascript"></script>
+	<script src="/joomla_57778/templates/theme3289/js/scripts.js" type="text/javascript"></script>
+	<script src="/joomla_57778/templates/theme3289/html/mod_icemegamenu/js/menu.js" type="text/javascript" defer="defer"></script>
+	<script src="/joomla_57778/templates/theme3289/html/mod_icemegamenu/js/jquery.rd-navbar.js" type="text/javascript" defer="defer"></script>
+	<script type="text/javascript">
+(function($){$(document).ready(function(){autosize($("textarea"))})})(jQuery);jQuery(function($){
+
+			 	var error = "Something went wrong, please try again later.",
+validator = $("#contact-form_115").validate({
+
+			 		wrapper: "mark",
+
+					submitHandler: function(form) {
+$(form).ajaxsendmail();
+return false;
+
+					}
+
+				});
+$("#clear_115").click(function(){
+
+		            $("#contact-form_115").trigger("reset");
+
+		            validator.resetForm();
+if(!$.support.placeholder){
+
+				            $(".mod_tm_ajax_contact_form *[placeholder]").each(function(n){
+
+				        		$(this)
+
+					        		.parent()
+
+			                        .find(">.form_placeholder")
+
+			                        .show();
+
+					        })
+
+				        }
+return false;
+
+			        })
+$('#message_3').rules('add', { 
+
+								  minlength: 50
+
+								});
+})
+jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });
+	jQuery(function ($) {
+		initChosen();
+		$("body").on("subform-row-add", initChosen);
+
+		function initChosen(event, container)
+		{
+			container = container || document;
+			$(container).find("select").chosen({"disable_search_threshold":10,"search_contains":true,"allow_single_deselect":true,"placeholder_text_multiple":"Type or select some options","placeholder_text_single":"Select an option","no_results_text":"No results match"});
+		}
+	});
+	var path = "templates/theme3289/js/";(function($){$(document).ready(function(){var o=$("#back-top");$(window).scroll(function(){if($(this).scrollTop()>100){o.fadeIn()}else{o.fadeOut()}});var $scrollEl=($.browser.mozilla||$.browser.msie)?$("html"):$("body,html");o.find("a").click(function(){$scrollEl.animate({scrollTop:0},400);return false})})})(jQuery);jQuery(function($){var e=$(window).width();$("#icemegamenu").find(".icesubMenu").each(function(a){var b=$(this).offset();var c=b.left+$(this).width();if(c>=e){$(this).addClass("ice_righttoleft")}});$(window).resize(function(){var d=$(window).width();$("#icemegamenu").find(".icesubMenu").removeClass("ice_righttoleft").each(function(a){var b=$(this).offset();var c=b.left+$(this).width();if(c>=d){$(this).addClass("ice_righttoleft")}})})});
+	</script>
+
+    </head>
+    <body class="body__ option-com_contact view-contact task- itemid-142">
+                <!-- Body -->
+        <div id="wrapper">
+            <div class="wrapper-inner">
+                <a id="fake" href='#'></a>
+                <div id="banner">
+                    <div class="row-container">
+                        <div class="container-fluid">
+                            <div class="row-fluid">
+                                <div class="moduletable   span12"><div class="module_container"><div class="mod-custom mod-custom__"  >
+	<a href="https://www.templatemonster.com/joomla-templates/trucky-transportation-company-joomla-template-57653.html"><img src="/joomla_57778/images/TRANSPORTATION.jpg" alt=""/></a></div></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Top -->
+                <div id="top">
+                    <div class="row-container">
+                        <div class="container-fluid">
+                            <div class="row-fluid">
+                                <!-- Logo -->
+                                <div id="logo" class="span4">
+                                    <a href="https://livedemo00-joomla.template-help.com/joomla_57778/">
+                                                                                <h1><span class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first item_title_part_last">Tracky</span></h1>
+                                    </a>
+                                                                        
+                                        <div class="site-description">TRANSPORTATION COMPANY</div>
+                                                                    </div>
+                                <nav class="moduletable home_menu  span8"><div class="module_container">
+<div class="icemegamenu">
+	<ul id="icemegamenu">
+		<li id="iceMenu_101" class="iceMenuLiLevel_1 fullwidth">
+			<a href="https://livedemo00-joomla.template-help.com/joomla_57778/" class=" iceMenuTitle ">
+				<span class="icemega_title icemega_nosubtitle">Home</span>
+			</a>
+		</li>
+		<li id="iceMenu_134" class="iceMenuLiLevel_1 ">
+			<a href="/joomla_57778/index.php/about" class=" iceMenuTitle ">
+				<span class="icemega_title icemega_nosubtitle">About</span>
+			</a>
+		</li>
+		<li id="iceMenu_285" class="iceMenuLiLevel_1 ">
+			<a href="/joomla_57778/index.php/blog" class=" iceMenuTitle ">
+				<span class="icemega_title icemega_nosubtitle">Blog</span>
+			</a>
+		</li>
+		<li id="iceMenu_203" class="iceMenuLiLevel_1 gallery">
+			<a href="/joomla_57778/index.php/gallery" class=" iceMenuTitle ">
+				<span class="icemega_title icemega_nosubtitle">Gallery</span>
+			</a>
+		</li>
+		<li id="iceMenu_142" class="iceMenuLiLevel_1 current active ">
+			<a href="/joomla_57778/index.php/contacts" class="icemega_active iceMenuTitle ">
+				<span class="icemega_title icemega_nosubtitle">Contacts</span>
+			</a>
+		</li>
+	</ul>
+</div></div></nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <div id="breadcrumbs">
+                    <div class="row-container">
+                        <div class="container-fluid">
+                            <!-- Breadcrumbs -->
+                            <div class="row-fluid">
+                                <div class="moduletable   span12"><div class="module_container">
+<ul class="breadcrumb">
+	<li><a href="/joomla_57778/index.php" class="pathway">Home</a><span class="divider">&nbsp;|&nbsp;</span></li><li class="active"><span>Contacts</span></li></ul>
+</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                                <!-- Main Content row -->
+                <div id="content">
+                                        <div class="row-container">
+                        <div class="container-fluid">
+                                                <div class="content-inner row-fluid">
+                                                                <div id="component" class="span12">
+                                    <main role="main">
+                                                                                <div id="system-message-container">
+	</div>
+
+                                        <div class="page page-contact page-contact__">
+
+    <!-- Heading -->
+  <div class="page_header">
+    <h1><span class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first item_title_part_last">Contacts</span></h1>
+  </div>
+      <!-- CONTACT FORM -->
+    
+
+  <div class="row-fluid">
+  <!-- Address -->
+      
+
+<div class="contact_details span4">
+			<h2><span class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first item_title_part_last">Address:</span></h2>				<div class="contact_address">
+		<i class="icons-marker fa fa-home"></i>
+			138 Atlantis Ln			Kingsport			Illinois			121164					</div>
+			<h2><span class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first item_title_part_last">Phones:</span></h2>		<div class="contact_details_telephone">
+		<i class="icons-marker fa fa-phone"></i>
+			800-2345-6789		</div>			
+		<div class="clearfix"></div>
+				<div class="contact_details_fax">
+		<i class="icons-marker fa fa-fax"></i>
+			800-2345-6789		</div>
+		<div class="clearfix"></div>
+				<h2><span class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first item_title_part_last">E-mail:</span></h2>		<div class="contact_details_emailto">	
+		<i class="icons-marker fa fa-envelope"></i>			
+			<span id="cloak272342a5705ff1b12487337695cc4cd7">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+				document.getElementById('cloak272342a5705ff1b12487337695cc4cd7').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy272342a5705ff1b12487337695cc4cd7 = 'm&#97;&#105;l' + '&#64;';
+				addy272342a5705ff1b12487337695cc4cd7 = addy272342a5705ff1b12487337695cc4cd7 + 'd&#101;m&#111;l&#105;nk' + '&#46;' + '&#111;rg';
+				var addy_text272342a5705ff1b12487337695cc4cd7 = 'm&#97;&#105;l' + '&#64;' + 'd&#101;m&#111;l&#105;nk' + '&#46;' + '&#111;rg';document.getElementById('cloak272342a5705ff1b12487337695cc4cd7').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy272342a5705ff1b12487337695cc4cd7 + '\'>'+addy_text272342a5705ff1b12487337695cc4cd7+'<\/a>';
+		</script>		</div>
+		<div class="clearfix"></div>
+		    <div class="contact_vcard">
+    	Download information as:      	<a href="/joomla_57778/index.php/contacts?format=vcf">vCard</a>
+    </div>
+     <div class="clearfix"></div>
+	 </div>    <div class="span8">
+  <!-- Misc -->
+  
+  <div class="contact_misc">
+	  <h2><span class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first">Miscellaneous</span> <span class="item_title_part_1 item_title_part_even item_title_part_second_half item_title_part_last">information:</span></h2><p>Email us with any questions or inquiries or use our contact data.</p>  </div>
+  
+<div id="contact_115">
+
+	<form class="mod_tm_ajax_contact_form" id="contact-form_115" novalidate>
+
+		<input type="hidden" id="module_id" name="module_id" value="115">
+
+		<div class="mod_tm_ajax_contact_form_message" id="message_115">
+
+			<span class="s">Thank You! Your message has been sent.</span>
+
+			<span class="e">Something went wrong, please try again later.</span>
+
+			<span class="c">Please enter a correct Captcha answer.</span>
+
+		</div>
+
+		<fieldset>
+
+			<div class="row-fluid">
+
+				<div class="control control-group-input span4"><div class="controls"><input type="text" placeholder="Name" name="name" id="name_0" class="mod_tm_ajax_contact_form_text hasTooltip" required title="Name"></div>
+
+					</div><div class="control control-group-input span4"><div class="controls"><input type="email" placeholder="Email" name="email" id="email_1" class="mod_tm_ajax_contact_form_email hasTooltip" required title="Email"></div>
+
+					</div><div class="control control-group-input span4"><div class="controls"><input type="text" placeholder="Phone" name="phone" id="phone_2" class="mod_tm_ajax_contact_form_text hasTooltip" title="Phone"></div>
+
+					</div><div class="control control-group-input span12"><div class="controls"><textarea name="message" placeholder="Message" id="message_3" class="mod_tm_ajax_contact_form_textarea hasTooltip" required title="Message"></textarea></div>
+
+					</div>
+				<!-- Submit Button -->
+
+				<div class="control control-group-button span12">
+
+					<div class="controls">
+
+						<button type="submit" class="btn btn-primary mod_tm_ajax_contact_form_btn">Send</button>
+
+					
+						<button type="reset" id="clear_115" class="btn btn-primary mod_tm_ajax_contact_form_btn">Clear</button>
+
+					
+					</div>
+
+				</div>
+
+			</div>
+
+		</fieldset>
+
+	</form>
+
+</div>
+
+  
+  </div>
+  </div>
+
+  
+  <!-- MISC INFO -->
+
+      
+</div>
+                                                                            </main>
+                                </div>
+                                                            </div>
+                                                    </div>
+                    </div>
+                                            </div>
+                                <!-- <div id="push"></div> -->
+            </div>
+        </div>
+        <div id="footer-wrapper">
+            <div class="footer-wrapper-inner">
+                                <!-- Copyright -->
+                <div id="copyright" role="contentinfo">
+                    <div class="row-container">
+                        <div class="container-fluid">
+                            <div class="row-fluid">
+                                <div class="moduletable   span12"><div class="module_container"><div class="mod-custom mod-custom__"  >
+	<p><a href="https://www.templatemonster.com/joomla-templates/trucky-transportation-company-joomla-template-57653.html"><img src="/joomla_57778/images/TRANSPORTATION_big.jpg" alt=""/></a></p></div></div></div>
+                                <div class="copyright span12">
+                                                                        <span class="siteName">Tracky</span>
+                                    <span class="copy">&copy; </span><span class="year">2022</span>                                    <a class="privacy_link" rel="license" href="/joomla_57778/index.php/privacy-policy">
+                                        Privacy Policy                                    </a>
+                                       <p>Design by <a href="https://zemez.io/">Zemez</a></p>
+                                                                    </div>
+                                                                <!-- {%FOOTER_LINK} -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="back-top">
+        <a href="#"><span></span> </a>
+    </div>        
+                
+    <!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P9FT69" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P9FT69');</script><!-- End Google Tag Manager --></body>
+</html>
